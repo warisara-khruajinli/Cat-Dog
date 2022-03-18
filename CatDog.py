@@ -95,7 +95,7 @@ model.compile(
     metrics=['accuracy'])
 model.summary()
 
-EPOCHS = 5
+EPOCHS = 1
 history = model.fit(train_data, epochs=EPOCHS,
                     validation_data=validate_data, batch_size=BATCH_SIZE)
 
@@ -149,4 +149,7 @@ def predict_img(img_path, show=False):
 
 predict_img('train/cat/cat.1560.jpg',True)
 
-model.save("model.h5")
+# model.save("model.h5")
+# model.save("./model.h5")
+model.save("/Users/warisara/Desktop/model.h5")
+# model.save("train/model.h5",True)
